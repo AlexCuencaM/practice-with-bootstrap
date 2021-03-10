@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Link para documentacion en bootstrap -->
+<!-- https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Solo para estilos -->
+    <link rel="stylesheet" href="src/mystyles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- HTML 5 dejo obsoleto a Flash -->
+    <title>Temas Cool</title>
+</head>
+
+<!-- GET
+    Peticion (Request): Es pedir un recurso, ya sea una web o datos (Das click en wikipedia)
+    Respuesta (Response): Es lo que el servidor te arroja (te carga la pagina web)
+    Latencia: El tiempo de respuesta entre el cliente y el servidor
+
+    GET: Viaja en texto plano si lo usas en los formularios, normalmente se ven en la URL
+ -->
+
+<!-- POST
+    Peticion: Pides el procesamiento de los datos(Tu usuario y contraseña)
+    Respuesta: Te devuelve un codigo http(si estas o no loggeado) -->
+
+<!-- codigo HTTP
+        201: Created
+        200: Esta aprobado
+        404: No se encuentra la pagina o el recurso
+        400: Peticion invalida(bad request)
+        500: el servidor
+     -->
+
+<body>
+    <!--     
+    Atributos generales
+        id
+        class
+        name -->
+    <!-- h1 es una etiqueta que indica que el texto sera una cabecera o un titulo -->
+
+    <!-- https://getbootstrap.com/docs/5.0/layout/containers/ -->
+    <div class="container">
+        <h1 id="Titulo" class="fresco">Insertar tema </h1>
+        <p class="parrafo">Hola, estoy escribiendo un parrafo</p>
+        <div>
+            <p class="parrafo">Hola, estoy escribiendo un parrafo y estoy dentro de un div</p>
+        </div>
+
+        <form method="post" id="form-theme">
+            <label for="tema">Tema</label>
+            <input type="text" id="tema" />
+            <input type="submit" class="btn btn-primary" value="Guardar">
+        </form>
+        <h2 class="fresco">Lista de temas</h2>
+        <button id="botoncito" class="btn btn-dark">Press me</button>
+
+        <table id="table-theme">
+            <thead>
+                <tr>
+                    <th>Descripcion</th>
+                </tr>
+            </thead>
+
+            <tbody id="table-body">
+            </tbody>
+
+        </table>
+    </div>
+
+    <!-- IDE pycharm(python) -->
+    <!-- solo para scripts o archivos JS -->
+    <script src="./src/index.js"></script>
+</body>
+
+</html>
